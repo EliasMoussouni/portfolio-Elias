@@ -557,3 +557,40 @@ Media Queries
   object-fit: cover;
   border-radius: 8px;
 }
+
+
+/*****************
+Custom Overlay for Personal Projects
+*****************/
+
+.project-wrapper {
+  position: relative;
+}
+
+.project-wrapper .project-btn {
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #4a3aff;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.project-wrapper:hover .project-btn {
+  opacity: 1;
+}
+
+.project-wrapper img {
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+
+.project-wrapper:hover img {
+  filter: grayscale(0%);
+}

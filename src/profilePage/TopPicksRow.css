@@ -1,0 +1,179 @@
+.top-picks-row {
+  margin: 14px 0 6px;
+  padding: 8px 20px;
+}
+
+.row-title {
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 14px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.card-row-wrap {
+  position: relative;
+}
+
+.card-row {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  overflow-y: visible;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(229, 9, 20, 0.75) rgba(255, 255, 255, 0.1);
+  padding: 8px 0 14px;
+}
+
+.row-arrow {
+  position: absolute;
+  top: 8px;
+  bottom: 14px;
+  width: 46px;
+  border: none;
+  color: #fff;
+  font-size: 3.2rem;
+  line-height: 1;
+  cursor: pointer;
+  z-index: 4;
+  transition: background-color 160ms ease, opacity 160ms ease;
+  opacity: 0.92;
+  background: rgba(0, 0, 0, 0.46);
+}
+
+.row-arrow:hover,
+.row-arrow:focus-visible {
+  background: rgba(0, 0, 0, 0.72);
+  opacity: 1;
+  outline: none;
+}
+
+.row-arrow-left {
+  left: 0;
+  border-radius: 8px 0 0 8px;
+}
+
+.row-arrow-right {
+  right: 0;
+  border-radius: 0 8px 8px 0;
+}
+
+.card-row::-webkit-scrollbar {
+  height: 8px;
+}
+
+.card-row::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+  background: rgba(229, 9, 20, 0.75);
+}
+
+.pick-card {
+  position: relative;
+  width: 388px;
+  min-width: 388px;
+  height: 258px;
+  border-radius: 8px;
+  overflow: hidden;
+  scroll-snap-align: start;
+  z-index: 0;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: slideIn 0.5s ease forwards;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.pick-card:hover,
+.pick-card:focus-visible {
+  transform: scale(1.075);
+  z-index: 2;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(255, 0, 0, 0.5);
+  outline: none;
+}
+
+.pick-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.pick-card:hover .pick-image,
+.pick-card:focus-visible .pick-image {
+  transform: scale(1.1);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.pick-card:hover .overlay,
+.pick-card:focus-visible .overlay {
+  opacity: 1;
+}
+
+.pick-label {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: bold;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.pick-label:hover {
+  color: rgb(153, 80, 80);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .top-picks-row {
+    padding: 8px 14px;
+  }
+
+  .row-title {
+    font-size: 1.55rem;
+  }
+
+  .pick-card {
+    width: 88vw;
+    min-width: 88vw;
+    height: 56vw;
+    min-height: 180px;
+  }
+
+  .row-arrow {
+    display: none;
+  }
+}

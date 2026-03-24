@@ -1,0 +1,13 @@
+.references-testimonials-page {
+  min-height: calc(100vh - 84px);
+  padding: 0 0 18px;
+  background: #141414;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.references-testimonials-carousel {
+  width: 100%;
+  max-width: 1180px;
+}

@@ -1,0 +1,173 @@
+.music-page {
+  min-height: 100vh;
+  padding: 96px 24px 48px;
+  color: #fff;
+  background:
+    radial-gradient(circle at top, rgba(229, 9, 20, 0.12), transparent 24%),
+    linear-gradient(180deg, #090909 0%, #111114 24%, #141414 100%);
+}
+
+.music-hero {
+  width: min(100%, 980px);
+  margin: 0 auto 34px;
+  text-align: center;
+}
+
+.music-kicker {
+  margin: 0 0 10px;
+  color: #e50914;
+  font-size: 0.92rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.music-hero h1 {
+  margin: 0;
+  font-size: clamp(2.4rem, 5vw, 4.2rem);
+  line-height: 1;
+  font-weight: 800;
+}
+
+.music-intro {
+  margin: 16px auto 0;
+  max-width: 720px;
+  color: #d4d4d8;
+  font-size: clamp(1.05rem, 1.6vw, 1.2rem);
+  line-height: 1.65;
+}
+
+.genre-section,
+.albums-section {
+  width: min(100%, 1120px);
+  margin: 0 auto 34px;
+}
+
+.genre-section h2,
+.albums-section h2 {
+  margin: 0 0 16px;
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: #f5f5f5;
+}
+
+.genres,
+.albums {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.genre-card {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 14px 22px;
+  border-radius: 999px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  font-size: 1rem;
+  cursor: default;
+  animation: popIn 0.45s forwards ease-out;
+}
+
+.genre-card p {
+  margin: 0;
+  color: #f1f1f1;
+  font-weight: 700;
+}
+
+.genre-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(229, 9, 20, 0.5);
+  box-shadow: 0 10px 24px rgba(229, 9, 20, 0.14);
+}
+
+.album-card {
+  background: linear-gradient(180deg, rgba(24, 24, 28, 0.96) 0%, rgba(14, 14, 17, 0.98) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 18px;
+  overflow: hidden;
+  width: min(100%, 320px);
+  transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.02), 0 14px 36px rgba(0, 0, 0, 0.34);
+  animation: popIn 0.5s forwards ease-out;
+}
+
+.album-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(229, 9, 20, 0.5);
+  box-shadow: 0 16px 34px rgba(229, 9, 20, 0.15);
+}
+
+.album-image {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  display: block;
+}
+
+.album-image-chopin {
+  object-position: center top;
+}
+
+.album-details {
+  padding: 18px 18px 20px;
+}
+
+.album-details h3 {
+  margin: 0;
+  font-size: 1.18rem;
+  color: #fff;
+  line-height: 1.3;
+}
+
+.album-artist {
+  margin: 8px 0 0;
+  color: #e50914;
+  font-size: 0.98rem;
+  font-weight: 700;
+}
+
+.album-note {
+  margin: 12px 0 0;
+  color: #cfcfd4;
+  font-size: 0.96rem;
+  line-height: 1.55;
+}
+
+@keyframes popIn {
+  from {
+    transform: translateY(10px) scale(0.98);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .music-page {
+    padding: 84px 16px 32px;
+  }
+
+  .music-hero {
+    margin-bottom: 28px;
+  }
+
+  .genre-section,
+  .albums-section {
+    margin-bottom: 28px;
+  }
+
+  .album-card {
+    width: min(100%, 360px);
+  }
+
+  .album-image {
+    height: 210px;
+  }
+}

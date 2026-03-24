@@ -1,0 +1,264 @@
+.cinema-page {
+  min-height: 100vh;
+  background: #141414;
+  color: #fff;
+  padding-bottom: 42px;
+  animation: cinema-page-fade 0.5s ease-out;
+}
+
+.cinema-hero {
+  min-height: 72vh;
+  padding: 110px 28px 64px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+  transition: background-image 0.45s ease, background-position 0.45s ease;
+}
+
+.cinema-hero-copy {
+  max-width: 660px;
+  animation: cinema-hero-copy-in 0.45s ease-out;
+}
+
+.cinema-kicker {
+  margin: 0 0 10px;
+  color: #e50914;
+  font-size: 0.9rem;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.cinema-hero h1 {
+  margin: 0;
+  font-size: clamp(3rem, 7vw, 5.6rem);
+  line-height: 0.95;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+}
+
+.cinema-meta {
+  margin: 14px 0 0;
+  color: #d2d2d4;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.cinema-description {
+  margin: 18px 0 0;
+  max-width: 560px;
+  color: #f3f3f3;
+  font-size: clamp(1.02rem, 1.8vw, 1.22rem);
+  line-height: 1.7;
+}
+
+.cinema-tags {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.cinema-tags span {
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #f6f6f7;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.cinema-row-section {
+  margin-top: -4px;
+  padding: 0 24px;
+  animation: cinema-row-rise 0.55s ease-out both;
+}
+
+.cinema-row-section h2 {
+  margin: 24px 0 14px;
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: #fff;
+}
+
+.cinema-row {
+  display: flex;
+  gap: 14px;
+  overflow-x: auto;
+  padding: 6px 0 18px;
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(229, 9, 20, 0.75) rgba(255, 255, 255, 0.08);
+}
+
+.cinema-row::-webkit-scrollbar {
+  height: 8px;
+}
+
+.cinema-row::-webkit-scrollbar-thumb {
+  background: rgba(229, 9, 20, 0.75);
+  border-radius: 999px;
+}
+
+.cinema-card {
+  position: relative;
+  flex: 0 0 360px;
+  height: 218px;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #0d0d0f;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 0;
+  cursor: pointer;
+  text-align: left;
+  color: #fff;
+  appearance: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease, filter 0.3s ease;
+}
+
+.cinema-card:hover {
+  transform: translateY(-4px) scale(1.04);
+  z-index: 3;
+  border-color: rgba(229, 9, 20, 0.42);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.42), 0 0 18px rgba(229, 9, 20, 0.18);
+}
+
+.cinema-card:hover .cinema-card-image {
+  transform: scale(1.04);
+}
+
+.cinema-card-active {
+  border-color: rgba(229, 9, 20, 0.75);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.42), 0 0 24px rgba(229, 9, 20, 0.28);
+}
+
+.cinema-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.45s ease, filter 0.45s ease;
+}
+
+.cinema-card-image-jojo {
+  object-fit: contain;
+  object-position: right center;
+  transform: scale(1.1);
+  background:
+    radial-gradient(circle at 68% 28%, rgba(255, 208, 0, 0.18), transparent 20%),
+    linear-gradient(135deg, #1b0b2f 0%, #321054 40%, #08080d 100%);
+}
+
+.cinema-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.06) 0%, rgba(0, 0, 0, 0.22) 35%, rgba(0, 0, 0, 0.9) 100%);
+  transition: background 0.3s ease;
+}
+
+.cinema-card:hover .cinema-card-overlay {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.04) 0%, rgba(0, 0, 0, 0.18) 35%, rgba(0, 0, 0, 0.88) 100%);
+}
+
+.cinema-card-copy {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 18px 18px 16px;
+}
+
+.cinema-card-year {
+  margin: 0 0 6px;
+  color: #e50914;
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.cinema-card-copy h3 {
+  margin: 0;
+  color: #fff;
+  font-size: 1.5rem;
+  line-height: 1.08;
+  font-weight: 800;
+}
+
+.cinema-card-director {
+  margin: 6px 0 0;
+  color: #d8d8db;
+  font-size: 0.98rem;
+  font-weight: 600;
+}
+
+.cinema-row-section:nth-of-type(2) {
+  animation-delay: 0.06s;
+}
+
+.cinema-row-section:nth-of-type(3) {
+  animation-delay: 0.12s;
+}
+
+.cinema-row-section:nth-of-type(4) {
+  animation-delay: 0.18s;
+}
+
+@keyframes cinema-page-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes cinema-hero-copy-in {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes cinema-row-rise {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .cinema-hero {
+    min-height: 62vh;
+    padding: 92px 16px 40px;
+  }
+
+  .cinema-row-section {
+    padding: 0 14px;
+  }
+
+  .cinema-row-section h2 {
+    font-size: 1.35rem;
+  }
+
+  .cinema-card {
+    flex-basis: 82vw;
+    height: 52vw;
+    min-height: 210px;
+  }
+
+  .cinema-card-copy h3 {
+    font-size: 1.28rem;
+  }
+}

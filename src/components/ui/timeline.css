@@ -1,0 +1,150 @@
+.timeline-root {
+  width: 100%;
+  background: transparent;
+  font-family: 'Netflix Sans', Helvetica Neue, Segoe UI, Roboto, Ubuntu, sans-serif;
+}
+
+.timeline-shell {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 28px 24px 10px;
+}
+
+.timeline-heading {
+  margin: 0 0 14px;
+  max-width: 900px;
+  color: #ffffff;
+  font-size: clamp(2rem, 4vw, 4.2rem);
+  font-weight: 900;
+  letter-spacing: -0.04em;
+}
+
+.timeline-intro {
+  margin: 0;
+  max-width: 720px;
+  color: #b7bcc9;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.timeline-entries {
+  position: relative;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px 24px;
+}
+
+.timeline-row {
+  display: flex;
+  justify-content: flex-start;
+  gap: 0;
+  padding-top: 28px;
+}
+
+.timeline-left {
+  position: sticky;
+  top: 160px;
+  z-index: 4;
+  align-self: flex-start;
+  width: 100%;
+  max-width: 340px;
+}
+
+.timeline-dot-shell {
+  position: absolute;
+  left: 4px;
+  top: 6px;
+  width: 42px;
+  height: 42px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #080808;
+}
+
+.timeline-dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 999px;
+  background: #151515;
+  border: 1px solid #2e2e2e;
+}
+
+.timeline-title-desktop {
+  display: block;
+  margin: 0;
+  padding-left: 68px;
+  color: #717171;
+  font-size: clamp(2.1rem, 4vw, 4rem);
+  font-weight: 900;
+  letter-spacing: -0.04em;
+}
+
+.timeline-right {
+  width: 100%;
+  padding-left: 118px;
+  padding-right: 8px;
+}
+
+.timeline-title-mobile {
+  display: none;
+}
+
+.timeline-line-track {
+  position: absolute;
+  left: 44px;
+  top: 0;
+  width: 2px;
+  overflow: hidden;
+  background: linear-gradient(to bottom, transparent 0%, #212121 10%, #212121 90%, transparent 100%);
+}
+
+.timeline-line-progress {
+  position: absolute;
+  inset: 0 auto auto 0;
+  width: 2px;
+  border-radius: 999px;
+  background: linear-gradient(to top, #e50914 0%, #5a8cff 60%, transparent 100%);
+}
+
+@media (max-width: 900px) {
+  .timeline-shell {
+    padding: 20px 16px 8px;
+  }
+
+  .timeline-entries {
+    padding: 0 16px 18px;
+  }
+
+  .timeline-row {
+    padding-top: 20px;
+  }
+
+  .timeline-left {
+    max-width: 56px;
+    min-width: 56px;
+  }
+
+  .timeline-title-desktop {
+    display: none;
+  }
+
+  .timeline-title-mobile {
+    display: block;
+    margin: 0 0 16px;
+    color: #717171;
+    font-size: 1.8rem;
+    font-weight: 900;
+    letter-spacing: -0.04em;
+  }
+
+  .timeline-right {
+    padding-left: 28px;
+    padding-right: 0;
+  }
+
+  .timeline-line-track {
+    left: 32px;
+  }
+}

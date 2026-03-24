@@ -1,0 +1,329 @@
+.portfolio-rows {
+  padding: 0 20px 36px;
+  background: linear-gradient(180deg, rgba(20, 20, 20, 0) 0%, rgba(20, 20, 20, 0.92) 12%, #141414 100%);
+}
+
+.carousel-section {
+  margin: 34px 0;
+}
+
+.carousel-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 14px;
+}
+
+.carousel-header h2 {
+  margin: 0;
+  color: #f4f4f4;
+  font-size: clamp(1.6rem, 2.6vw, 2.2rem);
+  letter-spacing: 0.4px;
+  cursor: pointer;
+  display: inline-flex;
+}
+
+.carousel-header h2:hover,
+.carousel-header h2:focus-visible {
+  color: #ffffff;
+  text-shadow: 0 0 18px rgba(229, 9, 20, 0.55);
+  outline: none;
+}
+
+.carousel-header p {
+  margin: 6px 0 0;
+  color: #b5b5b5;
+  font-size: 0.93rem;
+  max-width: 760px;
+}
+
+.carousel-controls {
+  display: flex;
+  gap: 8px;
+}
+
+.see-all-button {
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.42);
+  color: #fff;
+  height: 36px;
+  padding: 0 14px;
+  cursor: pointer;
+  transition: transform 140ms ease, background-color 140ms ease, border-color 140ms ease;
+}
+
+.see-all-button:hover,
+.see-all-button:focus-visible {
+  background: rgba(229, 9, 20, 0.85);
+  border-color: #e50914;
+  outline: none;
+  transform: translateY(-1px);
+}
+
+.carousel-controls button {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  cursor: pointer;
+  transition: transform 140ms ease, background-color 140ms ease, border-color 140ms ease;
+}
+
+.carousel-controls button:hover,
+.carousel-controls button:focus-visible {
+  background: rgba(229, 9, 20, 0.85);
+  border-color: #e50914;
+  transform: scale(1.03);
+  outline: none;
+}
+
+.carousel-track {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(260px, 270px);
+  gap: 14px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 8px;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(229, 9, 20, 0.65) rgba(255, 255, 255, 0.05);
+}
+
+.carousel-track::-webkit-scrollbar {
+  height: 8px;
+}
+
+.carousel-track::-webkit-scrollbar-thumb {
+  background: rgba(229, 9, 20, 0.7);
+  border-radius: 999px;
+}
+
+.carousel-track:focus-visible {
+  outline: 2px solid rgba(229, 9, 20, 0.85);
+  outline-offset: 4px;
+}
+
+.netflix-card {
+  position: relative;
+  min-height: 210px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: linear-gradient(180deg, #2b2b2b 0%, #141414 100%);
+  scroll-snap-align: start;
+  cursor: pointer;
+  transition: transform 220ms cubic-bezier(.2, .8, .2, 1), box-shadow 220ms ease, border-color 220ms ease;
+  transform: translateZ(0);
+}
+
+.netflix-card:hover,
+.netflix-card:focus-visible {
+  transform: scale(1.03);
+  box-shadow: 0 18px 32px rgba(0, 0, 0, 0.55);
+  border-color: rgba(229, 9, 20, 0.85);
+  outline: none;
+}
+
+.netflix-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  inset: 0;
+}
+
+.netflix-card-placeholder {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(circle at 80% 10%, rgba(229, 9, 20, 0.45), rgba(20, 20, 20, 0.95));
+  color: #fff;
+  text-align: center;
+  padding: 24px;
+}
+
+.netflix-card-gradient {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.48);
+}
+
+.netflix-card-center-title {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  padding: 10px;
+  text-align: center;
+}
+
+.netflix-card-center-title h3 {
+  margin: 0;
+  color: #fff;
+  font-size: 2rem;
+  text-shadow: 0 2px 9px rgba(0, 0, 0, 0.75);
+}
+
+.netflix-card-content {
+  position: absolute;
+  inset: auto 0 0 0;
+  z-index: 3;
+  padding: 14px;
+  transform: translateY(110%);
+  transition: transform 220ms ease;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.1) 0, rgba(0, 0, 0, 0.92) 40%);
+}
+
+.netflix-card:hover .netflix-card-content,
+.netflix-card:focus-visible .netflix-card-content {
+  transform: translateY(0);
+}
+
+.netflix-card:hover .netflix-card-center-title,
+.netflix-card:focus-visible .netflix-card-center-title {
+  opacity: 0.05;
+}
+
+.card-subtitle,
+.card-period,
+.card-summary {
+  margin: 4px 0 0;
+  font-size: 0.87rem;
+  color: #dbdbdb;
+}
+
+.card-summary {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.card-tags span {
+  font-size: 0.73rem;
+  background: rgba(255, 255, 255, 0.18);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 999px;
+  padding: 2px 8px;
+}
+
+.portfolio-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.72);
+  display: grid;
+  place-items: center;
+  z-index: 50;
+  padding: 20px;
+}
+
+.portfolio-modal {
+  width: min(840px, 100%);
+  max-height: 92vh;
+  overflow: auto;
+  background: #111;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 14px;
+  padding: 20px;
+  color: #f2f2f2;
+}
+
+.modal-close {
+  border: none;
+  background: #e50914;
+  color: #fff;
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.modal-image {
+  width: 100%;
+  border-radius: 10px;
+  margin: 12px 0 14px;
+  max-height: 340px;
+  object-fit: cover;
+}
+
+.modal-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.modal-gallery img {
+  width: 100%;
+  height: 96px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.portfolio-modal h3 {
+  margin: 0;
+}
+
+.modal-subtitle,
+.modal-period,
+.modal-location,
+.modal-summary {
+  color: #d1d1d1;
+  margin: 6px 0;
+}
+
+.modal-bullets {
+  margin: 12px 0;
+  padding-left: 20px;
+}
+
+.modal-bullets li {
+  margin-bottom: 6px;
+}
+
+.modal-links {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.modal-links a {
+  text-decoration: none;
+  color: #fff;
+  background: rgba(229, 9, 20, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 999px;
+  padding: 6px 12px;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 900px) {
+  .carousel-track {
+    grid-auto-columns: minmax(255px, 76vw);
+  }
+
+  .carousel-controls {
+    display: none;
+  }
+
+  .see-all-button {
+    margin-left: auto;
+  }
+}

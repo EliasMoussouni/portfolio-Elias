@@ -1,0 +1,188 @@
+.elias-gpt-page {
+  min-height: 100vh;
+  background: #111217;
+  color: #f1f1f1;
+  padding: 92px 16px 24px;
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+  gap: 14px;
+}
+
+.elias-gpt-header {
+  text-align: center;
+}
+
+.elias-gpt-header h1 {
+  margin: 0;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  color: #fff;
+}
+
+.elias-gpt-header p {
+  margin: 8px 0 0;
+  color: #b8b8b8;
+}
+
+.elias-gpt-suggestions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+.elias-gpt-suggestions button {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 999px;
+  background: #1c1d22;
+  color: #f4f4f4;
+  padding: 7px 12px;
+  cursor: pointer;
+}
+
+.elias-gpt-thread {
+  max-width: 980px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow: auto;
+  padding: 4px;
+}
+
+.elias-gpt-message {
+  border-radius: 12px;
+  padding: 10px 12px;
+  max-width: 86%;
+  white-space: pre-wrap;
+}
+
+.elias-gpt-message.assistant {
+  align-self: flex-start;
+  background: #1b1f2a;
+  border: 1px solid rgba(48, 118, 255, 0.35);
+}
+
+.elias-gpt-message.user {
+  align-self: flex-end;
+  background: #29171a;
+  border: 1px solid rgba(229, 9, 20, 0.45);
+}
+
+.elias-gpt-role {
+  display: block;
+  font-size: 0.82rem;
+  color: #a9b0bf;
+  margin-bottom: 4px;
+}
+
+.elias-gpt-message p {
+  margin: 0;
+  line-height: 1.45;
+}
+
+.elias-gpt-meta {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-size: 0.76rem;
+  color: #9ea6b8;
+}
+
+.elias-gpt-confidence {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.elias-gpt-confidence.high {
+  color: #9fe3b2;
+}
+
+.elias-gpt-confidence.medium {
+  color: #e8d18c;
+}
+
+.elias-gpt-confidence.low {
+  color: #d6a6a6;
+}
+
+.elias-gpt-followups {
+  max-width: 980px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.elias-gpt-followups button {
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.04);
+  color: #e7e7e7;
+  padding: 7px 12px;
+  cursor: pointer;
+}
+
+.elias-gpt-sources {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.elias-gpt-source-link {
+  text-decoration: none;
+  color: #d7def0;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 999px;
+  padding: 6px 10px;
+  font-size: 0.78rem;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.elias-gpt-composer {
+  max-width: 980px;
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 8px;
+}
+
+.elias-gpt-composer textarea {
+  width: 100%;
+  resize: vertical;
+  min-height: 62px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: #181920;
+  color: #fff;
+  padding: 10px;
+}
+
+.elias-gpt-composer button {
+  border: none;
+  border-radius: 10px;
+  background: #e50914;
+  color: #fff;
+  min-width: 96px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.elias-gpt-composer button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .elias-gpt-composer {
+    grid-template-columns: 1fr;
+  }
+
+  .elias-gpt-message {
+    max-width: 100%;
+  }
+}

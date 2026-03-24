@@ -1,0 +1,100 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id            String          @id @default(cuid())
+  email         String          @unique
+  name          String?
+  role          UserRole        @default(USER)
+  createdAt     DateTime        @default(now())
+  updatedAt     DateTime        @updatedAt
+  watchProgress WatchProgress[]
+  favorites     Favorite[]
+}
+
+model Content {
+  id          String          @id @default(cuid())
+  slug        String          @unique
+  title       String
+  type        ContentType
+  year        Int
+  duration    String
+  maturity    String
+  synopsis    String
+  trailerUrl  String
+  videoUrl    String
+  createdAt   DateTime        @default(now())
+  updatedAt   DateTime        @updatedAt
+  genres      Genre[]
+  tags        Tag[]
+  mediaAssets MediaAsset[]
+  progress    WatchProgress[]
+  favorites   Favorite[]
+}
+
+model Genre {
+  id      String    @id @default(cuid())
+  name    String    @unique
+  content Content[]
+}
+
+model Tag {
+  id      String    @id @default(cuid())
+  name    String    @unique
+  content Content[]
+}
+
+model MediaAsset {
+  id        String    @id @default(cuid())
+  type      AssetType
+  url       String
+  contentId String
+  content   Content   @relation(fields: [contentId], references: [id], onDelete: Cascade)
+}
+
+model WatchProgress {
+  id              String   @id @default(cuid())
+  progressPercent Int
+  updatedAt       DateTime @updatedAt
+  userId          String
+  contentId       String
+  user            User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  content         Content  @relation(fields: [contentId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, contentId])
+}
+
+model Favorite {
+  id        String  @id @default(cuid())
+  userId    String
+  contentId String
+  user      User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+  content   Content @relation(fields: [contentId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, contentId])
+}
+
+enum ContentType {
+  movie
+  series
+  project
+}
+
+enum UserRole {
+  USER
+  EDITOR
+  ADMIN
+}
+
+enum AssetType {
+  poster
+  backdrop
+  trailer
+  video
+}

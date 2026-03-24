@@ -1,0 +1,181 @@
+\documentclass[9pt,a4paper]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{anyfontsize}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\begin{document}
+
+\begin{center}
+    \textbf{\Large Elias Moussouni} \\
+    \small \href{https://www.linkedin.com/in/elias-moussouni-075410241/}{LinkedIn} --- Email: \href{mailto:moussounielias@gmail.com}{moussounielias@gmail.com} --- Mobile: +33 6 95 12 16 86 --- \href{https://eliasmoussouni.fr}{Website}
+\end{center}
+
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {AI Engineer (Apprenticeship)}{Oct 2025 -- Oct 2027}
+      {Sagemcom}{Paris, France}
+      \resumeItemListStart
+        \resumeItem{Emotion recognition: developed facial-emotion recognition models.}
+        \resumeItem{Enterprise RAG assistant: contributed to an internal ChatBot (RAG) and agent/prompt engineering.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Waiter (Fixed-term contract)}{Nov 2024 -- Dec 2024}
+      {L'Eau Ã  la bouche}{London, United Kingdom}
+      \resumeItemListStart
+        \resumeItem{Customer service: served customers in English; supported kitchen/front-of-house during peak hours.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Embedded Systems Engineer (Internship)}{Jan 2024 -- Feb 2024}
+      {Videlio Events}{Gennevilliers, France}
+      \resumeItemListStart
+        \resumeItem{Troubleshooting \& repair: diagnosed and repaired hardware/software issues on electronic boards and monitors.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+\section{Projects}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Bioreactor AI Optimisation}{December 2025}
+      {Hackathon: Hack The Fork -- 2nd place winner among the best engineering schools in France}{}
+      \resumeItemListStart
+        \resumeItem{Developed ReaKt, an AI-powered bioreactor autopilot; ranked 2nd among top French engineering schools (Polytechnique, CentraleSupelec, etc.).}
+        \resumeItem{Implemented LSTM neural networks and Model Predictive Control (MPC) to predict fermentation dynamics and optimize metabolic yields.}
+        \resumeItem{Achieved real-time simulation and control algorithms in Python, dynamically adjusting environmental parameters to improve process efficiency.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {On-device Speech Recognition}{}
+      {Embedded AI}{}
+      \resumeItemListStart
+        \resumeItem{Embedded voice recognition: on-device speech recognition pipeline for constrained environments.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Computer Vision Projects}{}
+      {Face \& emotion recognition}{}
+      \resumeItemListStart
+        \resumeItem{Computer vision: facial recognition and facial-emotion recognition.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Web Projects}{}
+      {Portfolio \& nutrition app}{}
+      \resumeItemListStart
+        \resumeItem{Web/mobile: \href{https://eliasmoussouni.fr}{eliasmoussouni.fr} and a diet tracking web/mobile application.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Self-balancing Gyropod}{}
+      {Robotics}{}
+      \resumeItemListStart
+        \resumeItem{Robotics prototype: two-wheel self-balancing gyropod.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {ECE Paris Engineering School}{Paris, France}
+      {Engineering degree --- Artificial Intelligence \& Data (Expected graduation 2027)}{Sep 2022 -- Present}
+      \resumeItemListStart
+        \resumeItem{Relevant coursework: Computer science, data, AI, advanced mathematics, electronics.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Omnes Education London School}{London, United Kingdom}
+      {International exchange semester --- Artificial Intelligence}{May 2025 -- Jul 2025}
+      \resumeItemListStart
+        \resumeItem{Focus: neural networks, MATLAB, probability \& statistics, Java programming.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+\section{Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Technical Skills} \\
+     Deep learning, machine learning, computer vision, LLMs/RAG, prompt engineering, embedded systems, FPGA/VHDL, Arduino, Git/GitHub, Linux/Ubuntu \\
+     \textbf{Programming Languages} \\
+     Python, C, Java, MATLAB, SQL, HTML, CSS, JavaScript, TypeScript \\
+     \textbf{Soft Skills} \\
+     Teamwork, autonomy, problem-solving, organization, project management, adaptability
+    }}
+ \end{itemize}
+
+\section{Languages}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     French --- Native \\
+     English --- C1 (TOEIC 850) \\
+     Spanish --- B1
+    }}
+ \end{itemize}
+
+\section{Extracurricular Activities}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{IngLeague} Co-founder \& co-president (Mar 2024 -- Aug 2025) --- inter-class tournaments (400+ students), \href{https://ingleague.fr}{IngLeague.fr}. \\
+     \textbf{League of Legends} Master rank (Feb 2020 -- present). \\
+     \textbf{American football} Gaulois de Sannois (2019--2022) --- ÃŽle-de-France champion 2022.
+    }}
+ \end{itemize}
+
+\end{document}

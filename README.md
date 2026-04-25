@@ -87,7 +87,10 @@ A Netflix-inspired personal portfolio built with React and TypeScript, featuring
 ### Vagrant VM
 
 ![Vagrant Up](docs/screenshots/vagrant-up.png)
-![Ansible Playbook](docs/screenshots/ansible.png)
+
+### GitHub Pages Deployment
+
+![GitHub Pages](docs/screenshots/github-pages.png)
 
 ---
 
@@ -104,7 +107,7 @@ A Netflix-inspired personal portfolio built with React and TypeScript, featuring
 ### Clone the repository
 
 ```bash
-git clone https://github.com/eliasmouss/portfolio-v2.git
+git clone https://github.com/EliasMoussouni/portfolio-Elias.git
 cd portfolio-v2
 npm install
 ```
@@ -293,8 +296,8 @@ minikube service portfolio-service
 | Platform | URL |
 |---|---|
 | Live site | [www.eliasmoussouni.fr](https://www.eliasmoussouni.fr) |
-| GitHub Pages | [https://emouSS.github.io/portfolio-v2](https://emouSS.github.io/portfolio-v2) |
-| Vercel | [https://portfolio-v2.vercel.app](https://portfolio-v2.vercel.app) |
+| GitHub Pages | [https://EliasMoussouni.github.io/portfolio-Elias](https://EliasMoussouni.github.io/portfolio-Elias) |
+| Vercel | [https://portfolio-elias-fgdxzqudi-mouss-projects-d832c4a9.vercel.app](https://portfolio-elias-fgdxzqudi-mouss-projects-d832c4a9.vercel.app) |
 | Docker Hub | [https://hub.docker.com/r/eliasmouss/portfolio](https://hub.docker.com/r/eliasmouss/portfolio) |
 
 ---

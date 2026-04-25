@@ -1,0 +1,29 @@
+{
+  "cv": [
+    "/cv/cv_elias_moussouni_fr.pdf",
+    "/cv/cv_elias_moussouni_eng.pdf"
+  ],
+  "certificats": [
+    "/certificats/certificat_1.png",
+    "/certificats/certificat_2.png"
+  ],
+  "hackathon": [
+    "/hackathon/1765896140097.jpg",
+    "/hackathon/1765961375533.jpg",
+    "/hackathon/1771853886168.jpg",
+    "/hackathon/55bd97db-f683-4243-a9f7-d1ca171a920c.jpeg",
+    "/hackathon/demo.jpeg",
+    "/hackathon/IMG_0366.jpeg",
+    "/hackathon/IMG_0422.jpeg",
+    "/hackathon/Certificat.jpg"
+  ],
+  "sources": {
+    "cvOfficiel": [
+      "Cv/Officiel/cv_elias_moussouni_Fr.pdf",
+      "Cv/Officiel/cv_elias_moussouni_eng.pdf"
+    ],
+    "legacyPortfolio": [
+      "index_elias_final_corrected2.html"
+    ]
+  }
+}

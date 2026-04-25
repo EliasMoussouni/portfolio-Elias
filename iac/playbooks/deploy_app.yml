@@ -1,19 +1,17 @@
 ---
-- name: Build and deploy the portfolio app
+- name: Deploy the portfolio app
   block:
-    - name: Install npm dependencies
-      command: npm ci
-      args:
-        chdir: /var/www/portfolio
-      environment:
-        CI: "false"
+    - name: Check that build folder exists in synced folder
+      stat:
+        path: /var/www/portfolio/build
+      register: build_dir
 
-    - name: Build the React app
-      command: npm run build
-      args:
-        chdir: /var/www/portfolio
-      environment:
-        CI: "false"
+    - name: Copy pre-built app to nginx root
+      copy:
+        src: /var/www/portfolio/build/
+        dest: /usr/share/nginx/html/
+        remote_src: yes
+      when: build_dir.stat.exists
 
     - name: Reload nginx
       service:

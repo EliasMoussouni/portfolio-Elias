@@ -118,9 +118,11 @@ Aperçu rapide des technologies utilisées et de leur rôle dans le projet :
 ![kubectl get pods](docs/screenshots/k8s-pods.png)
 ![kubectl get services](docs/screenshots/k8s-services.png)
 
-### Vagrant VM
+### Vagrant + Ansible
 
 ![Vagrant Up](docs/screenshots/vagrant-up.png)
+![Ansible Playbook 1](docs/screenshots/ansible.png)
+![Ansible Playbook 2](docs/screenshots/ansible-2.png)
 
 ### GitHub Pages Deployment
 

@@ -55,5 +55,14 @@
   },
   "devDependencies": {
     "@types/react-vertical-timeline-component": "^3.3.6"
+  },
+  "jest": {
+    "transformIgnorePatterns": [
+      "node_modules/(?!(graphql-request)/)"
+    ],
+    "moduleNameMapper": {
+      "\\.(css|less|scss|sass)$": "<rootDir>/src/__mocks__/styleMock.js",
+      "\\.(jpg|jpeg|png|gif|svg|mp3|mp4|webm|wav|ogg)$": "<rootDir>/src/__mocks__/fileMock.js"
+    }
   }
 }

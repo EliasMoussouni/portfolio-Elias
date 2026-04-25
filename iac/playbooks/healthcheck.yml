@@ -1,0 +1,26 @@
+---
+- name: Health check — verify the app is running
+  block:
+    - name: Wait for nginx to be ready
+      wait_for:
+        host: localhost
+        port: 80
+        timeout: 30
+
+    - name: Check health endpoint
+      uri:
+        url: http://localhost/health
+        method: GET
+        status_code: 200
+      register: health_result
+
+    - name: Check homepage responds
+      uri:
+        url: http://localhost/
+        method: GET
+        status_code: 200
+      register: homepage_result
+
+    - name: Print health check result
+      debug:
+        msg: "App is healthy — status: {{ health_result.status }}, homepage: {{ homepage_result.status }}"

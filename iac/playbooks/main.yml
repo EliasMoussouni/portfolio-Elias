@@ -1,0 +1,10 @@
+---
+- name: Provision portfolio VM
+  hosts: all
+  become: true
+
+  tasks:
+    - import_tasks: install_node.yml
+    - import_tasks: install_nginx.yml
+    - import_tasks: deploy_app.yml
+    - import_tasks: healthcheck.yml

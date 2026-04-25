@@ -1,0 +1,12 @@
+node_modules
+build
+.next
+.git
+.env*
+coverage
+*.docx
+Dossier_Inspiration
+hackTheFork
+hackathon_suede
+Reference
+docs

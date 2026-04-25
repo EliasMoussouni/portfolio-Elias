@@ -343,7 +343,7 @@ minikube service portfolio-service
 **Elias Moussouni**
 - Email: elias.moussouni@edu.ece.fr
 - LinkedIn: [elias-moussouni](https://www.linkedin.com/in/elias-moussouni-075410241/)
-- GitHub: [@emouSS](https://github.com/emouSS)
+- GitHub: [@emouSS](https://github.com/eliasmoussouni)
 
 **Clément Morin**
 - Email: clementpro971@gmail.com

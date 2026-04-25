@@ -6,6 +6,40 @@ A Netflix-inspired personal portfolio built with React and TypeScript, featuring
 
 ---
 
+## Tech Stack
+
+Aperçu rapide des technologies utilisées et de leur rôle dans le projet :
+
+| Catégorie | Technologie | Rôle dans le projet |
+|---|---|---|
+| Frontend | **React 18 + TypeScript** | Construction de l'UI Netflix-style avec composants typés (sélection de profils, sections plein écran) |
+| Frontend | **Next.js / React (build)** | Rendu statique du portfolio et routing entre les sections (Work, Skills, Projects, etc.) |
+| Styling | **Tailwind CSS + PostCSS** | Système de design utilitaire pour les écrans Netflix-like et le responsive |
+| Animations | **Framer Motion** | Transitions entre profils, animations d'entrée des sections et interactions UI |
+| AI locale | **EliasGPT (retrieval engine maison)** | Assistant conversationnel basé sur une base de connaissances structurée — 100 % côté frontend, sans backend ni coût d'API |
+| Tests | **Jest + React Testing Library** | Tests unitaires (`answerEngine.test.ts`) et tests de composants (`App.test.tsx`) |
+| CI/CD | **GitHub Actions** (`.github/workflows/ci.yml`) | Pipeline auto sur chaque push `main` : install → tests → build → déploiement GitHub Pages |
+| Conteneurisation | **Docker (multi-stage)** | Stage 1 : build Node 18 Alpine ; Stage 2 : nginx Alpine servant les fichiers statiques sur port 80 |
+| Conteneurisation | **Docker Compose** | Orchestration locale du conteneur de l'app (port 8080 → 80) |
+| Registry | **Docker Hub** | Publication de l'image `eliasmouss/portfolio:latest` consommée par Kubernetes |
+| Web server | **Nginx** | Sert les fichiers statiques buildés en production (dans le conteneur et sur la VM Vagrant) |
+| IaC | **Vagrant + VirtualBox** | Provisionne une VM Ubuntu 22.04 (192.168.56.10, 1 Go RAM) reproductible localement |
+| IaC | **Ansible** | Playbooks installant Node.js, nginx, déployant l'app et vérifiant le healthcheck sur la VM |
+| Orchestration | **Kubernetes (Minikube)** | Déploiement local : `deployment.yaml` (pods depuis Docker Hub) + `service.yaml` (NodePort) |
+| Hébergement | **GitHub Pages + Vercel** | Double déploiement statique du site (redondance + previews Vercel) |
+| DNS | **Gandi** | Domaine custom `www.eliasmoussouni.fr` pointant vers GitHub Pages |
+| Healthcheck | Endpoint `/health` | Renvoie `{"status":"ok"}` — utilisé par Ansible et pour vérifier les déploiements |
+
+### Comment ces technos s'articulent
+
+1. **Développement** → React + TS + Tailwind, tests Jest en local.
+2. **Push sur `main`** → GitHub Actions exécute tests + build + déploie sur GitHub Pages.
+3. **Image Docker** → build multi-stage poussée sur Docker Hub.
+4. **Déploiement reproductible** → Vagrant + Ansible (VM Ubuntu) **ou** Kubernetes/Minikube (depuis Docker Hub).
+5. **Production publique** → GitHub Pages + Vercel, derrière le domaine Gandi.
+
+---
+
 ## Table of Contents
 
 - [Work Performed](#work-performed)
@@ -308,5 +342,10 @@ minikube service portfolio-service
 - Email: elias.moussouni@edu.ece.fr
 - LinkedIn: [elias-moussouni](https://www.linkedin.com/in/elias-moussouni-075410241/)
 - GitHub: [@emouSS](https://github.com/emouSS)
+
+**Clément Morin**
+- Email: clementpro971@gmail.com
+- LinkedIn: [clément morin](https://www.linkedin.com/in/clément-mor1/)
+- GitHub: [@zdhun](https://github.com/zdhun)
 
 *ECE Paris — DevOps Project — 2025/2026*
